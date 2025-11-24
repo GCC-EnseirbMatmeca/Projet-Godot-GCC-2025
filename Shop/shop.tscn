@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccbwtlr7xevxo"]
+[gd_scene load_steps=3 format=3 uid="uid://ccbwtlr7xevxo"]
 
 [ext_resource type="Texture2D" uid="uid://4bxvg2t3s7na" path="res://icon.svg" id="1_3weqf"]
+[ext_resource type="PackedScene" uid="uid://bchnln35ckfl7" path="res://Door/door.tscn" id="2_qlv7h"]
 
 [node name="Shop" type="Node2D"]
 
@@ -8,3 +9,8 @@
 modulate = Color(0.089999974, 0.8028333, 1, 1)
 scale = Vector2(10, 10)
 texture = ExtResource("1_3weqf")
+
+[node name="Door" parent="." instance=ExtResource("2_qlv7h")]
+position = Vector2(626, 5)
+scale = Vector2(4, 4)
+next_room = 1
