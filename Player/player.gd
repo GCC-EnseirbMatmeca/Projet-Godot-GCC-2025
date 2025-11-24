@@ -7,7 +7,7 @@ func _ready() -> void :
 	pass
 
 func _physics_process(delta): # delta = 1/fps	
-	var direction : Vector2 = Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down"))
+	var direction : Vector2 = Input.get_vector("left","right","up","down")
 	if direction:
 		velocity = direction * SPEED * delta
 	else:
