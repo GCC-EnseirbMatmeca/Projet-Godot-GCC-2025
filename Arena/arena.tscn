@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb5i6ekh0hhqs"]
+
+[ext_resource type="Texture2D" uid="uid://4bxvg2t3s7na" path="res://icon.svg" id="1_ddjon"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 0.51666665, 0, 1)
+scale = Vector2(10, 10)
+texture = ExtResource("1_ddjon")
