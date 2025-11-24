@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bihvecqybaoef"]
+
+[ext_resource type="Script" uid="uid://deaparhm5x4lk" path="res://Shop/chest_inventory_slot.gd" id="1_2xkug"]
+
+[node name="ChestInventorySlot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2xkug")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://cditmqvnyotom"]
+
+[ext_resource type="PackedScene" uid="uid://bihvecqybaoef" path="res://Shop/chest_inventory_slot.tscn" id="1_m1pmb"]
+
+[node name="ChestInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 5
+
+[node name="ChestInventorySlot" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot2" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot3" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot4" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot5" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot6" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot7" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot8" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot9" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot10" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot11" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
+
+[node name="ChestInventorySlot12" parent="GridContainer" instance=ExtResource("1_m1pmb")]
+layout_mode = 2
