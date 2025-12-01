@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddpuhx6y42xd4"]
+
+[ext_resource type="Theme" uid="uid://b8dg4l6oytx6t" path="res://UI/UI_Theme.tres" id="1_j06qs"]
+[ext_resource type="Shader" uid="uid://b7q0ygvegkf4w" path="res://UI/MarginIcon.gdshader" id="1_ovu7r"]
+[ext_resource type="Script" uid="uid://dpmh081yaqyup" path="res://UI/Scripts/margin_icon.gd" id="2_615ea"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iq0m0"]
+shader = ExtResource("1_ovu7r")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/active = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovu7r"]
+resource_local_to_scene = true
+shader = ExtResource("1_ovu7r")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/active = 0
+
+[node name="MarginIcon" type="MarginContainer"]
+material = SubResource("ShaderMaterial_iq0m0")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 0
+theme = ExtResource("1_j06qs")
+script = ExtResource("2_615ea")
+isDragged = null
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ovu7r")
+layout_mode = 2
+size_flags_stretch_ratio = 4.25
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

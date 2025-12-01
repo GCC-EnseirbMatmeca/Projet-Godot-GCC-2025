@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://djxl801k8b0d0"]
+[gd_scene load_steps=5 format=3 uid="uid://djxl801k8b0d0"]
+
+[ext_resource type="Theme" uid="uid://b8dg4l6oytx6t" path="res://UI/UI_Theme.tres" id="1_dajm1"]
+[ext_resource type="PackedScene" uid="uid://ddpuhx6y42xd4" path="res://UI/MarginIcon.tscn" id="2_dajm1"]
+[ext_resource type="Texture2D" uid="uid://dyi2bho4378hp" path="res://Assets/UI/heart pixel art 16x16.png" id="2_e6gg6"]
+[ext_resource type="Script" uid="uid://c4qdq8k3a5iw4" path="res://UI/Scripts/GlobalUI.gd" id="2_hat8c"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -7,3 +12,70 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_dajm1")
+script = ExtResource("2_hat8c")
+
+[node name="TL_HBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 26.0
+offset_bottom = 26.0
+
+[node name="HealthContainer" type="HBoxContainer" parent="TL_HBox"]
+layout_mode = 2
+
+[node name="MarginIcon" parent="TL_HBox/HealthContainer" instance=ExtResource("2_dajm1")]
+layout_mode = 2
+tex = ExtResource("2_e6gg6")
+isDragged = false
+
+[node name="MarginIcon2" parent="TL_HBox/HealthContainer" instance=ExtResource("2_dajm1")]
+layout_mode = 2
+tex = ExtResource("2_e6gg6")
+isDragged = false
+
+[node name="MarginIcon3" parent="TL_HBox/HealthContainer" instance=ExtResource("2_dajm1")]
+layout_mode = 2
+tex = ExtResource("2_e6gg6")
+isDragged = false
+
+[node name="MarginIcon4" parent="TL_HBox/HealthContainer" instance=ExtResource("2_dajm1")]
+layout_mode = 2
+tex = ExtResource("2_e6gg6")
+isDragged = false
+
+[node name="MarginIcon5" parent="TL_HBox/HealthContainer" instance=ExtResource("2_dajm1")]
+layout_mode = 2
+tex = ExtResource("2_e6gg6")
+isDragged = false
+
+[node name="TR_HBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="DL_HBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="DR_HBox4" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
