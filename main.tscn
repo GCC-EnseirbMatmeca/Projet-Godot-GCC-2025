@@ -14,8 +14,6 @@ player = NodePath("Shop/Player")
 [node name="Player" parent="Shop" instance=ExtResource("3_7mycd")]
 position = Vector2(2, 7)
 
-[node name="UI" parent="." instance=ExtResource("4_272bh")]
-offset_left = 203.0
-offset_top = 250.0
-offset_right = 203.0
-offset_bottom = 250.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_272bh")]
