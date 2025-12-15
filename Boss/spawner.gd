@@ -6,6 +6,8 @@ extends Node2D
 		repetitions = max(1, value)
 		if not Engine.is_editor_hint():
 			return
+		if not get_tree() :
+			return
 		for c in get_children():
 			c.name += "tmp"
 			c.queue_free()
@@ -30,7 +32,16 @@ extends Node2D
 		for i : int in range(get_children().size()):
 			get_child(i).rotation = rotation_offset + (2 * PI * i / repetitions)
 
-@onready var curve : Curve2D = Curve2D.new()
+
+@export var patterns : Dictionary[String, Curve2D] = {}
+@export_enum("Flower", "Line", "Spiral") var pattern_name : String = "Flower" :
+	set(value):
+		pattern_name = value
+		curve = patterns[pattern_name]
+		for i in get_children():
+			(i as Path2D).curve = curve
+var pattern_name_list : Array[String] = ["Flower", "Line", "Spiral"]
+@onready var curve : Curve2D = patterns[pattern_name]
 @onready var ball : PackedScene = preload("res://Boss/fireball.tscn")
 
 var timer_set : float = 1.0
@@ -39,6 +50,8 @@ var num_ball : int = 20
 func _ready():
 	if Engine.is_editor_hint():
 			return
+	pattern_name = pattern_name_list.pick_random()
+	##print(pattern_name)
 	timer = timer_set
 	##Global.get_player()
 	

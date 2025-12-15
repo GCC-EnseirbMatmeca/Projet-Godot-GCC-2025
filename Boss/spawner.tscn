@@ -1,75 +1,93 @@
-[gd_scene load_steps=3 format=3 uid="uid://cosjjxwcvp16m"]
+[gd_scene load_steps=5 format=3 uid="uid://cosjjxwcvp16m"]
 
 [ext_resource type="Script" uid="uid://gigirktjk7pl" path="res://Boss/spawner.gd" id="1_s6m8c"]
 
-[sub_resource type="Curve2D" id="Curve2D_s6m8c"]
+[sub_resource type="Curve2D" id="Curve2D_guajb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 60.450665, -57.035328, -60.450665, 57.035328, 139, 137, 0, 0, 3.170541, 1.5265568, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 60, -60, -60, 60, 150, 150, 0, 0, 0, 0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_8gy1c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 1000)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_le64i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, -75, -75, 75, 75, 50, 150, 0, 0, 0, 0, 200, 200)
 }
 point_count = 3
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_s6m8c")
 repetitions = 9
+patterns = Dictionary[String, Curve2D]({
+"Flower": SubResource("Curve2D_guajb"),
+"Line": SubResource("Curve2D_8gy1c"),
+"Spiral": SubResource("Curve2D_le64i")
+})
+pattern_name = "Spiral"
 
 [node name="Path_0" type="Path2D" parent="."]
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_0" type="PathFollow2D" parent="Path_0"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_1" type="Path2D" parent="."]
 rotation = 0.6981317
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_1" type="PathFollow2D" parent="Path_1"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_2" type="Path2D" parent="."]
 rotation = 1.3962634
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_2" type="PathFollow2D" parent="Path_2"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_3" type="Path2D" parent="."]
 rotation = 2.0943952
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_3" type="PathFollow2D" parent="Path_3"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_4" type="Path2D" parent="."]
 rotation = 2.7925267
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_4" type="PathFollow2D" parent="Path_4"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_5" type="Path2D" parent="."]
 rotation = 3.4906585
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_5" type="PathFollow2D" parent="Path_5"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_6" type="Path2D" parent="."]
 rotation = 4.1887903
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_6" type="PathFollow2D" parent="Path_6"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_7" type="Path2D" parent="."]
 rotation = 4.886922
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_7" type="PathFollow2D" parent="Path_7"]
-rotation = 0.3813032
+rotation = 1.8925469
 
 [node name="Path_8" type="Path2D" parent="."]
 rotation = 5.5850534
-curve = SubResource("Curve2D_s6m8c")
+curve = SubResource("Curve2D_le64i")
 
 [node name="PathFollow_8" type="PathFollow2D" parent="Path_8"]
-rotation = 0.3813032
+rotation = 1.8925469
