@@ -15,5 +15,6 @@ func load_room(room : Main.RoomType):
 	var next_room = room_array[room].instantiate()
 	add_child.call_deferred(next_room)
 	player.reparent(next_room)
+	player.position = next_room.get_node("Door").position + 0.5 * player.velocity
 	if previous_room != self :
 		previous_room.queue_free()

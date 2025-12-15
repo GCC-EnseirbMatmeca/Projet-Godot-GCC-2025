@@ -6,7 +6,7 @@ extends Node
 ## Value of the damage taken
 @export var damage_value : float = 1.0
 
-## Damage are taken each damage timer in seconds
+## Damage are taken each damage_timer seconds,
 ## if null damage are taken once when the object is created
 @export var damage_timer : float = 0.0
 

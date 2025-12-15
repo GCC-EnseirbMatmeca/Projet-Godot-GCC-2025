@@ -13,6 +13,7 @@ player = NodePath("Shop/Player")
 
 [node name="Player" parent="Shop" instance=ExtResource("3_7mycd")]
 position = Vector2(2, 7)
+scale = Vector2(0.3, 0.3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

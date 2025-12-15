@@ -11,6 +11,6 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_3weqf")
 
 [node name="Door" parent="." instance=ExtResource("2_qlv7h")]
-position = Vector2(626, 5)
+position = Vector2(680, 0)
 scale = Vector2(4, 4)
 next_room = 1

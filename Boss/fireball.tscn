@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://1yqhn56y25ys"]
+
+[ext_resource type="Script" uid="uid://d4ecp64evlr1i" path="res://Boss/fireball.gd" id="1_0nr4h"]
+[ext_resource type="Texture2D" uid="uid://c2ethjc21pv04" path="res://Assets/Boss/Firball.png" id="2_yfloi"]
+[ext_resource type="PackedScene" uid="uid://clij7u416yb0s" path="res://Boss/hurtbox.tscn" id="3_yfgm6"]
+
+[node name="Fireball" type="Node2D"]
+script = ExtResource("1_0nr4h")
+
+[node name="Firball" type="Sprite2D" parent="."]
+texture = ExtResource("2_yfloi")
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_yfgm6")]

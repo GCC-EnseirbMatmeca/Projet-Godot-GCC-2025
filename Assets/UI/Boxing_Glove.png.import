@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s15k628s2pjn"
-path="res://.godot/imported/Boxing_Glove.png-70f867b445d96cb250195ed75464c2ac.ctex"
+path="res://.godot/imported/Boxing_Glove.png-e2a166a1a0cb62e1f1e51044251796f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_assets/Boxing_Glove.png"
-dest_files=["res://.godot/imported/Boxing_Glove.png-70f867b445d96cb250195ed75464c2ac.ctex"]
+source_file="res://Assets/UI/Boxing_Glove.png"
+dest_files=["res://.godot/imported/Boxing_Glove.png-e2a166a1a0cb62e1f1e51044251796f7.ctex"]
 
 [params]
 

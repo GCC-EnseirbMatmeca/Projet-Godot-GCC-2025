@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb5i6ekh0hhqs"]
+[gd_scene load_steps=5 format=3 uid="uid://bb5i6ekh0hhqs"]
 
 [ext_resource type="Texture2D" uid="uid://4bxvg2t3s7na" path="res://icon.svg" id="1_ddjon"]
 [ext_resource type="PackedScene" uid="uid://bchnln35ckfl7" path="res://Door/door.tscn" id="2_upiig"]
+[ext_resource type="PackedScene" uid="uid://lax60unvrjx8" path="res://Boss/boss.tscn" id="3_sswsf"]
+[ext_resource type="PackedScene" uid="uid://cosjjxwcvp16m" path="res://Boss/spawner.tscn" id="4_v8uor"]
 
 [node name="Arena" type="Node2D"]
 
@@ -11,6 +13,13 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_ddjon")
 
 [node name="Door" parent="." instance=ExtResource("2_upiig")]
-position = Vector2(-640, -1)
+position = Vector2(-680, 0)
 scale = Vector2(4, 4)
 next_room = null
+
+[node name="Spawner" parent="." instance=ExtResource("4_v8uor")]
+position = Vector2(-1, -306)
+scale = Vector2(2, 2)
+
+[node name="Boss" parent="." instance=ExtResource("3_sswsf")]
+position = Vector2(-1, -306)

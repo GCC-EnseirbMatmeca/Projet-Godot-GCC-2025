@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://bpb3su55pj8m4" path="res://Items/Component/damage_zone.gd" id="1_h3yjk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5q1af"]
-radius = 19.149
+radius = 13.735
 
 [node name="DamageZone" type="Node"]
 script = ExtResource("1_h3yjk")
-radius = 19.149
+radius = 13.735
 
 [node name="Area" type="Area2D" parent="."]
 
