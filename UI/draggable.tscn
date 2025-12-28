@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://doj64yb0jaaj3"]
+
+[ext_resource type="Script" uid="uid://beyeq366ah8rb" path="res://UI/Scripts/draggable.gd" id="1_21vod"]
+
+[node name="Draggable" type="Node"]
+script = ExtResource("1_21vod")

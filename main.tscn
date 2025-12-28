@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca845vf2bo4gi"]
+[gd_scene load_steps=9 format=3 uid="uid://ca845vf2bo4gi"]
 
-[ext_resource type="Script" uid="uid://blpmasxpqfytt" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="Script" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://ccbwtlr7xevxo" path="res://Shop/shop.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cimls4b3r28x" path="res://Player/player.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://djxl801k8b0d0" path="res://UI/ui.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://doj64yb0jaaj3" path="res://UI/draggable.tscn" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://o8kq5i40vph4" path="res://Assets/UI/Coin_Counter.png" id="6_272bh"]
+[ext_resource type="Shader" uid="uid://b8b4bqggko6y8" path="res://UI/draggable.gdshader" id="7_272bh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
+resource_local_to_scene = true
+shader = ExtResource("7_272bh")
+shader_parameter/line_colour = Color(0.16665801, 0.6063345, 0.8329352, 1)
+shader_parameter/line_thickness = 1
+shader_parameter/active = 1
 
 [node name="Main" type="Node" node_paths=PackedStringArray("player")]
 script = ExtResource("1_lquwl")
@@ -18,3 +28,12 @@ scale = Vector2(0.3, 0.3)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("4_272bh")]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_272bh")
+
+[node name="Draggable" parent="CanvasLayer/UI/TextureRect" instance=ExtResource("5_7mycd")]
+parent_shader = SubResource("ShaderMaterial_272bh")

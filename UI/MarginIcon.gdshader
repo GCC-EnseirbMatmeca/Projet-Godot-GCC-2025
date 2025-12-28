@@ -1,5 +1,7 @@
 shader_type canvas_item;
 
+uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
+
 uniform vec4 outline_color : source_color;
 uniform int active : hint_range(0,1) = 1;
 
@@ -9,7 +11,7 @@ void vertex() {
 }
 
 void fragment() {
-	vec4 col = texture(TEXTURE, UV);
+	vec4 col = texture(screen_texture, UV);
 	
 	if(col.a <= 0.01 && active == 1) //Check if is transparent :
 	{
@@ -20,7 +22,7 @@ void fragment() {
 			for(int j = -1; j < 2; j++)
 			{
 				if(isOutline) break;
-				if(texture(TEXTURE, UV + vec2(float(i),float(j)) * TEXTURE_PIXEL_SIZE).a > 0.01)
+				if(texture(screen_texture, UV + vec2(float(i),float(j)) * TEXTURE_PIXEL_SIZE).a > 0.01)
 				{
 					isOutline = true;
 				}
