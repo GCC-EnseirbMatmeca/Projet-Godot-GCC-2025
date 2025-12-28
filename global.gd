@@ -4,6 +4,9 @@ var main : Node
 var player : Player
 @onready var player_scene : PackedScene = preload("res://Player/player.tscn")
 
+#UI
+var drag_container : DragContainer
+
 func _ready():
 	main = get_node("/root/Main")
 	if not main :
